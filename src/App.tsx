@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Eye, Shield } from 'lucide-react';
 import { PriceChart } from './components/PriceChart';
 import { WhaleTracker } from './components/WhaleTracker';

@@ -130,6 +130,14 @@ export const PriceChart: React.FC<PriceChartProps> = ({ marketEvent }) => {
           yAxisID: 'y1',
         },
         {
+          label: 'SOL Price',
+          data: solBase,
+          borderColor: '#14F195',
+          backgroundColor: 'rgba(20, 241, 149, 0.1)',
+          tension: 0.4,
+          yAxisID: 'y1',
+        },
+        {
           label: 'AI Projected Trend (BTC)',
           data: aiTrendBase,
           borderColor: '#00f0ff',

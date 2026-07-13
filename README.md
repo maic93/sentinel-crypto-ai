@@ -31,6 +31,22 @@ npm run dev
 
 Navigate to `http://localhost:5173` (or the URL provided in your terminal) to view the Sentinel dashboard.
 
+## Running with Docker
+
+You can also run Sentinel using Docker and Docker Compose. This utilizes a multi-stage build serving static files via Nginx.
+
+1. Ensure you have Docker and Docker Compose installed.
+2. Build and start the container by running:
+   ```bash
+   docker-compose up -d --build
+   ```
+3. Navigate to `http://localhost:3000` in your browser.
+
+To stop the container, run:
+```bash
+docker-compose down
+```
+
 ## Design Philosophy
 Sentinel uses a curated dark-mode theme featuring:
 - Custom dark blues and neon teals for a cyberpunk aesthetic.
