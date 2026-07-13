@@ -82,7 +82,7 @@ export const SentimentEngine: React.FC<SentimentEngineProps> = ({ marketEvent })
   } else if (gaugeValue < 45) {
     gaugeColor = 'var(--neon-red)';
     gaugeText = 'Fear';
-  } else if (gaugeValue < 55) {
+  } else if (gaugeValue <= 55) {
     gaugeColor = '#94a3b8';
     gaugeText = 'Neutral';
   } else if (gaugeValue > 75) {

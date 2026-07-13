@@ -1,4 +1,5 @@
 # Sentinel - AI Crypto Whale Tracker & Market Sentiment Predictor
+![CI](https://github.com/USERNAME/sentinel-crypto-ai/actions/workflows/ci.yml/badge.svg)
 
 Sentinel is a premium, responsive web application designed to track crypto whale movements, predict market sentiment using AI, and provide a comprehensive dashboard for traders and enthusiasts.
 
@@ -30,6 +31,13 @@ npm run dev
 ```
 
 Navigate to `http://localhost:5173` (or the URL provided in your terminal) to view the Sentinel dashboard.
+
+## Running Tests Locally
+
+Sentinel uses Vitest for unit testing. To run the test suite, execute:
+```bash
+npm run test
+```
 
 ## Running with Docker
 
