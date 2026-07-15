@@ -4,6 +4,7 @@ import { PriceChart } from './components/PriceChart';
 import { WhaleTracker } from './components/WhaleTracker';
 import { SentimentEngine } from './components/SentimentEngine';
 import { MarketController } from './components/MarketController';
+import { Portfolio } from './components/Portfolio';
 
 function App() {
   const [marketEvent, setMarketEvent] = useState<string | null>(null);
@@ -39,17 +40,17 @@ function App() {
       </header>
 
       <main className="grid-layout">
-        {/* Top Section */}
+        {/* Top Section — Market Controller */}
         <div className="col-span-12 animate-slide-in" style={{ animationDelay: '0.1s' }}>
           <MarketController onTriggerEvent={handleTriggerEvent} currentEvent={marketEvent} />
         </div>
 
-        {/* Middle Section */}
+        {/* Middle-left — Price Chart */}
         <div className="col-span-8 animate-slide-in" style={{ animationDelay: '0.2s' }}>
           <PriceChart marketEvent={marketEvent} />
         </div>
 
-        {/* Right Sidebar - Split into two sections */}
+        {/* Middle-right — Sentiment + Whale */}
         <div className="col-span-4 flex-col gap-6 animate-slide-in" style={{ animationDelay: '0.3s' }}>
           <div style={{ flex: 1 }}>
             <SentimentEngine marketEvent={marketEvent} />
@@ -57,6 +58,11 @@ function App() {
           <div style={{ flex: 1 }}>
             <WhaleTracker marketEvent={marketEvent} />
           </div>
+        </div>
+
+        {/* Bottom Section — Portfolio Simulator (full width) */}
+        <div className="col-span-12 animate-slide-in" style={{ animationDelay: '0.4s' }}>
+          <Portfolio marketEvent={marketEvent} />
         </div>
       </main>
     </div>
